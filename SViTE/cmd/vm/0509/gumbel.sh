@@ -1,0 +1,17 @@
+python -m torch.distributed.launch \
+    --nproc_per_node=8 \
+    --use_env main.py \
+    --model deit_small_patch16_224 \
+    --epochs 600 \
+    --batch-size 64 \
+    --data-path $1 \
+    --output_dir ./small_dst_uns_gumbel_0509 \
+    --dist_url tcp://127.0.0.1:25503 \
+    --sparse_init fixed_ERK \
+    --density 0.5 \
+    --update_frequency 15000 \
+    --growth gradient \
+    --death magnitude \
+    --redistribution none \
+    --num_workers $2 \
+    --token_selection

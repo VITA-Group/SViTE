@@ -1,0 +1,21 @@
+# export NCCL_P2P_DISABLE=1
+python -m torch.distributed.launch \
+    --nproc_per_node=4 \
+    --use_env inference.py \
+    --model deit_small_patch16_224_data \
+    --epochs 600 \
+    --batch-size 64 \
+    --data-path $1 \
+    --output_dir ./inference \
+    --dist_url tcp://127.0.0.1:25503 \
+    --sparse_init fixed_ERK \
+    --density 0.5 \
+    --update_frequency 15000 \
+    --growth gradient \
+    --death magnitude \
+    --redistribution none \
+    --num_workers 16 \
+    --token_selection \
+    --token_number $2 \
+    --resume $3 \
+    --train_eval

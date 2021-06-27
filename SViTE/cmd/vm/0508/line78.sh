@@ -1,0 +1,21 @@
+python -m torch.distributed.launch \
+    --nproc_per_node=8 \
+    --use_env main.py \
+    --pruning_type structure_new \
+    --model deit_base_patch16_224 \
+    --atten_head 12 \
+    --atten_density 0.4 \
+    --other_density 0.4 \
+    --update_frequency 7000 \
+    --epochs 600 \
+    --batch-size 128 \
+    --t_end 0.8 \
+    --data-path $1 \
+    --output_dir ./base_dst_structure_line78 \
+    --dist_url tcp://127.0.0.1:23305 \
+    --density 0.4 \
+    --sparse_init fixed_ERK \
+    --growth gradient \
+    --death magnitude \
+    --redistribution none \
+    --num_workers $2

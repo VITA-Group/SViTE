@@ -1,0 +1,20 @@
+python -m torch.distributed.launch \
+    --nproc_per_node=8 \
+    --use_env main.py \
+    --pruning_type structure_new \
+    --model deit_tiny_patch16_224 \
+    --atten_head 3 \
+    --atten_density 0.7 \
+    --other_density 0.7 \
+    --update_frequency 15000 \
+    --epochs 600 \
+    --batch-size 64 \
+    --t_end 0.8 \
+    --data-path /datadrive_a/TLC/imagenet \
+    --output_dir ./tiny_dst_structure_0428 \
+    --dist_url tcp://127.0.0.1:23305 \
+    --density 0.7 \
+    --sparse_init fixed_ERK \
+    --growth gradient \
+    --death magnitude \
+    --redistribution none
