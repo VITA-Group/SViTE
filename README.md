@@ -2,7 +2,7 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
 
-Codes for [Chasing Sparsity in Vision Transformers: An End-to-End Exploration](https://arxiv.org/pdf/2106.04533.pdf).
+Codes for [Preprint] [Chasing Sparsity in Vision Transformers: An End-to-End Exploration](https://arxiv.org/pdf/2106.04533.pdf).
 
 Tianlong Chen, Yu Cheng, Zhe Gan, Lu Yuan, Lei Zhang, Zhangyang Wang
 
@@ -108,7 +108,21 @@ Command for structured sparsity is comming soon!
 
 ## Pre-traiend SViTE Models.
 
+1. SViTE-Base with 40% structural sparsity ACC=82.22
 
+https://www.dropbox.com/s/ix7mmduvf0wlc4b/deit_base_structure_40_82.22.pth?dl=0
+
+2. SViTE-Base with 40% unstructured sparsity ACC=81.56
+
+https://www.dropbox.com/s/vltm4piwn9cwsop/deit_base_unstructure_40_81.56.pth?dl=0
+
+3. SViTE-Small with 50% unstructued sparsity and 5% data sparisity ACC=80.18
+
+https://www.dropbox.com/s/kofps21g857wlbt/deit_small_unstructure_50_sparseinput_0.95_80.18.pth?dl=0
+
+4. SViTE-Small with 50% unstructured sparsity and 10% data sparsity ACC=79.91
+
+https://www.dropbox.com/s/bdhpc6nfrwahcuc/deit_small_unstructure_50_sparseinput_0.90_79.91.pth?dl=0
 
 
 
