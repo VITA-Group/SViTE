@@ -152,9 +152,10 @@ class Masking(object):
             self.modules.append(module)
             index = 0
             for name, tensor in module.named_parameters():
-                if 'gumbel' in name: continue
                 name_cur = name + '_' + str(index)
                 index += 1
+
+                if 'gumbel' in name: continue
                 if len(tensor.size()) ==4 or len(tensor.size()) ==2:
                     self.names.append(name_cur)
                     self.masks[name_cur] = torch.zeros_like(tensor, dtype=torch.float32, requires_grad=False).cuda()
