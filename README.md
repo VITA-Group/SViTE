@@ -2,7 +2,7 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
 
-Codes for [Preprint] [Chasing Sparsity in Vision Transformers: An End-to-End Exploration](https://arxiv.org/pdf/2106.04533.pdf).
+Codes for [NeurIPS'21] [Chasing Sparsity in Vision Transformers: An End-to-End Exploration](https://arxiv.org/pdf/2106.04533.pdf).
 
 Tianlong Chen, Yu Cheng, Zhe Gan, Lu Yuan, Lei Zhang, Zhangyang Wang
 
