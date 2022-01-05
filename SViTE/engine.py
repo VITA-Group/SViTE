@@ -18,8 +18,8 @@ import pdb
 import warnings
 warnings.filterwarnings('ignore')
 
-def get_tau(max_tau, min_tau, ite, total):
-    tau = min_tau + (max_tau - min_tau) * ite / total 
+def get_tau(start_tau, end_tau, ite, total):
+    tau = start_tau + (end_tau - start_tau) * ite / total 
     return tau 
 
 ite_step = 0
